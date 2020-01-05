@@ -24,7 +24,7 @@ export class BehaviorVsReplayComponent implements OnInit {
     // this.replaySubjectWinsCase();
   }
 
-  ngOnDestro() {
+  ngOnDestroy() {
     this.behaviorSubject.unsubscribe();
     this.replaySubject.unsubscribe();
   }
