@@ -7,6 +7,7 @@ import { AsyncSubjectComponent } from "./components/async-subject/async-subject.
 import { BehaviorSubjectComponent } from "./components/behavior-subject/behavior-subject.component";
 import { ReplaySubjectComponent } from "./components/replay-subject/replay-subject.component";
 import { SubjectComponent } from "./components/subject/subject.component";
+import { BehaviorVsReplayComponent } from './components/behavior-vs-replay/behavior-vs-replay.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -15,7 +16,8 @@ import { SubjectComponent } from "./components/subject/subject.component";
     AsyncSubjectComponent,
     BehaviorSubjectComponent,
     ReplaySubjectComponent,
-    SubjectComponent
+    SubjectComponent,
+    BehaviorVsReplayComponent
   ],
   bootstrap: [AppComponent]
 })
