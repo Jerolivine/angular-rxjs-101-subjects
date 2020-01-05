@@ -19,7 +19,7 @@ export class BehaviorVsReplayComponent implements OnInit {
 
   ngOnInit() {
     // you can see the cases by deleting comments from the codes
-    // this.seemsSameCase();
+    this.seemsSameCase();
     // this.behaviorWinsCase();
     // this.replaySubjectWinsCase();
   }
@@ -90,6 +90,7 @@ export class BehaviorVsReplayComponent implements OnInit {
       );
     });
 
+    // it wont be triggerred
     this.behaviorSubject.subscribe(value => {
       this.messages.push(
         "BehaviorSubject Called Completed Method But The Values Are: " +
