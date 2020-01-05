@@ -17,22 +17,23 @@ export class BehaviorSubjectComponent implements OnInit {
       this.messages.push("Subscriber A: " + data);
       console.log("Subscriber A:", data);
     });
-    
+
     this.behaviorSubject.next(2);
     this.behaviorSubject.next(3);
     this.behaviorSubject.next(4);
+    // subscriber 2
     this.behaviorSubject.subscribe(data => {
       this.messages.push("Subscriber B: " + data);
-      console.log("Subscriber A:", data);
+      console.log("Subscriber B:", data);
     });
 
     this.behaviorSubject.next(5);
     this.behaviorSubject.next(6);
 
-    // subscriber 2
+    // subscriber 3
     this.behaviorSubject.subscribe(data => {
       this.messages.push("Subscriber C: " + data);
-      console.log("Subscriber B:", data);
+      console.log("Subscriber C:", data);
     });
 
     this.behaviorSubject.next(7);
