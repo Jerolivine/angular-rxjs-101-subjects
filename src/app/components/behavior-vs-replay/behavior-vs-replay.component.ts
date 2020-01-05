@@ -97,6 +97,7 @@ export class BehaviorVsReplayComponent implements OnInit {
           value.toString()
       );
     });
+
   }
 
   public next() {
