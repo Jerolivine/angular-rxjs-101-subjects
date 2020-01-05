@@ -12,12 +12,17 @@ export class BehaviorSubjectComponent implements OnInit {
   behaviorSubject = new BehaviorSubject<number>(1);
 
   ngOnInit(): void {
-    this.behaviorSubject.next(1);
+
+     this.behaviorSubject.subscribe(data => {
+      this.messages.push("Subscriber A: " + data);
+      console.log("Subscriber A:", data);
+    });
+    
     this.behaviorSubject.next(2);
     this.behaviorSubject.next(3);
     this.behaviorSubject.next(4);
     this.behaviorSubject.subscribe(data => {
-      this.messages.push("Subscriber A: " + data);
+      this.messages.push("Subscriber B: " + data);
       console.log("Subscriber A:", data);
     });
 
@@ -26,7 +31,7 @@ export class BehaviorSubjectComponent implements OnInit {
 
     // subscriber 2
     this.behaviorSubject.subscribe(data => {
-      this.messages.push("Subscriber B: " + data);
+      this.messages.push("Subscriber C: " + data);
       console.log("Subscriber B:", data);
     });
 
