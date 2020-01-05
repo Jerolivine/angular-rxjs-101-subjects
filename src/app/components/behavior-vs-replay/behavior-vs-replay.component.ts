@@ -19,7 +19,7 @@ export class BehaviorVsReplayComponent implements OnInit {
 
   ngOnInit() {
     // you can see the cases by deleting comments from the codes
-    this.seemsSameCase();
+    // this.seemsSameCase();
     // this.behaviorWinsCase();
     // this.replaySubjectWinsCase();
   }
