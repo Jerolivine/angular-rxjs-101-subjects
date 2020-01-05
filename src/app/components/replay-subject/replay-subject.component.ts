@@ -18,7 +18,7 @@ export class ReplaySubjectComponent implements OnInit {
     this.replaySubject.next(2);
     this.replaySubject.next(3);
     this.replaySubject.next(4);
-    // subscriber 2
+    // subscriber 1
     this.replaySubject.subscribe(data => {
       this.messages.push("Subscriber A: " + data);
       console.log("Subscriber A:", data);
@@ -27,7 +27,7 @@ export class ReplaySubjectComponent implements OnInit {
     this.replaySubject.next(5);
     this.replaySubject.next(6);
 
-    // subscriber 3
+    // subscriber 2
     this.replaySubject.subscribe(data => {
       this.messages.push("Subscriber B: " + data);
       console.log("Subscriber B:", data);
